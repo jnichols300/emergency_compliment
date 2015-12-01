@@ -15,13 +15,16 @@ var complimentsController = {
   },
   create: function(req, res){
     // use model to create compliment
-    var compliment = Compliment.create(req.body.compliment)
+    var compliment = Compliment.create(req.body.compliment);
     // redirect to compliment
-    res.redirect("/compliments")
-  }
+    res.redirect("/compliments");
+  },
   // edit action code goes here...
 
  // update action code goes here...
-}
+ update: function(req, res) {
+   var compliment = Compliment.update(req.body.compliment);
+ }
+};
 
 module.exports = complimentsController;
